@@ -110,7 +110,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: utbot-cli-python-${{ env.VERSION }}
-          path: utbot-cli-python/build/libs/utbot-cli-python${{ env.VERSION }}.jar
+          path: utbot-cli-python/build/libs/utbot-cli-python-${{ env.VERSION }}.jar
       
       - name: Build UTBot CLI Javascript
         if: ${{ matrix.configuration.plugin_type == 'IU' }}
@@ -123,7 +123,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: utbot-cli-js-${{ env.VERSION }}
-          path: utbot-cli-js/build/libs/utbot-cli-js${{ env.VERSION }}.jar
+          path: utbot-cli-js/build/libs/utbot-cli-js-${{ env.VERSION }}.jar
                 
       - name: Build UTBot CLI Go
         if: ${{ matrix.configuration.plugin_type == 'IU' }}
@@ -136,5 +136,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: utbot-cli-go-${{ env.VERSION }}
-          path: utbot-cli-go/build/libs/utbot-cli-go${{ env.VERSION }}.jar
+          path: utbot-cli-go/build/libs/utbot-cli-go-${{ env.VERSION }}.jar
 
